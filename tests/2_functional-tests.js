@@ -114,7 +114,6 @@ suite("Functional Tests", function () {
           .request(server)
           .get("/api/books/1")
           .end(function (err, res) {
-            console.log(res);
             assert.equal(res.status, 200);
             assert.equal(res.text, "no book exists");
             done();
